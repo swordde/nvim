@@ -59,3 +59,14 @@ vim.keymap.set("n", "<space>st", function()
     vim.cmd("wincmd J")
     vim.api.nvim_win_set_height(0, 5)
 end, { desc = "Open terminal at bottom" })
+
+
+vim.api.nvim_create_user_command(
+    "QwenChat",
+    function()
+        require("qwen").chat()
+    end,
+    {}
+)
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+

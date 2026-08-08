@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/swordemon/.cache/nvim/packer_hererocks/2.1.1772619647/share/lua/5.1/?.lua;/home/swordemon/.cache/nvim/packer_hererocks/2.1.1772619647/share/lua/5.1/?/init.lua;/home/swordemon/.cache/nvim/packer_hererocks/2.1.1772619647/lib/luarocks/rocks-5.1/?.lua;/home/swordemon/.cache/nvim/packer_hererocks/2.1.1772619647/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/swordemon/.cache/nvim/packer_hererocks/2.1.1772619647/lib/lua/5.1/?.so"
+local package_path_str = "/home/swordemon/.cache/nvim/packer_hererocks/2.1.1783773675/share/lua/5.1/?.lua;/home/swordemon/.cache/nvim/packer_hererocks/2.1.1783773675/share/lua/5.1/?/init.lua;/home/swordemon/.cache/nvim/packer_hererocks/2.1.1783773675/lib/luarocks/rocks-5.1/?.lua;/home/swordemon/.cache/nvim/packer_hererocks/2.1.1783773675/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/swordemon/.cache/nvim/packer_hererocks/2.1.1783773675/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -145,7 +145,7 @@ _G.packer_plugins = {
     url = "https://github.com/lima1909/resty.nvim"
   },
   ["supermaven-nvim"] = {
-    config = { "\27LJ\2\n‘\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\1\21suggestion_color\f#808080\21ignore_filetypes\1\4\0\0\benv\blog\fbigfile\fkeymaps\1\0\3\ncolor\0\21ignore_filetypes\0\fkeymaps\0\1\0\3\21clear_suggestion\n<C-]>\22accept_suggestion\n<Tab>\16accept_word\n<C-j>\nsetup\20supermaven-nvim\frequire\0" },
+    config = { "\27LJ\2\n‘\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\1\21suggestion_color\f#808080\21ignore_filetypes\1\4\0\0\benv\blog\fbigfile\fkeymaps\1\0\3\21ignore_filetypes\0\ncolor\0\fkeymaps\0\1\0\3\21clear_suggestion\n<C-]>\22accept_suggestion\n<Tab>\16accept_word\n<C-j>\nsetup\20supermaven-nvim\frequire\0" },
     loaded = true,
     path = "/home/swordemon/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
     url = "https://github.com/supermaven-inc/supermaven-nvim"
@@ -180,7 +180,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: supermaven-nvim
 time([[Config for supermaven-nvim]], true)
-try_loadstring("\27LJ\2\n‘\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\1\21suggestion_color\f#808080\21ignore_filetypes\1\4\0\0\benv\blog\fbigfile\fkeymaps\1\0\3\ncolor\0\21ignore_filetypes\0\fkeymaps\0\1\0\3\21clear_suggestion\n<C-]>\22accept_suggestion\n<Tab>\16accept_word\n<C-j>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+try_loadstring("\27LJ\2\n‘\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\1\21suggestion_color\f#808080\21ignore_filetypes\1\4\0\0\benv\blog\fbigfile\fkeymaps\1\0\3\21ignore_filetypes\0\ncolor\0\fkeymaps\0\1\0\3\21clear_suggestion\n<C-]>\22accept_suggestion\n<Tab>\16accept_word\n<C-j>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
 time([[Config for supermaven-nvim]], false)
 
 _G._packer.inside_compile = false
