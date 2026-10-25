@@ -11,6 +11,18 @@ require("swordemon.set")
 -- Colorscheme
 vim.cmd.colorscheme("quiet")
 
+-- Red cursor
+vim.api.nvim_set_hl(0, "Cursor", {
+    fg = "#000000",
+    bg = "#ff0000",
+})
+
+vim.opt.guicursor = {
+    "n-v-c:block-Cursor",
+    "i-ci:ver25-Cursor",
+    "r-cr:hor20-Cursor",
+}
+
 -- Custom dark red theme tweaks
 vim.api.nvim_set_hl(0, "Visual", {
     bg = "#3a0000",
@@ -44,7 +56,7 @@ vim.diagnostic.config({
     },
 })
 
--- Disable markdown syntax highlighting
+-- Disable Markdown syntax highlighting
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     callback = function()
@@ -58,15 +70,17 @@ vim.keymap.set("n", "<space>st", function()
     vim.cmd("term")
     vim.cmd("wincmd J")
     vim.api.nvim_win_set_height(0, 5)
-end, { desc = "Open terminal at bottom" })
+end, {
+    desc = "Open terminal at bottom",
+})
 
+-- Qwen chat command
+vim.api.nvim_create_user_command("QwenChat", function()
+    require("qwen").chat()
+end, {})
 
-vim.api.nvim_create_user_command(
-    "QwenChat",
-    function()
-        require("qwen").chat()
-    end,
-    {}
-)
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
-
+-- Exit terminal mode with Escape
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {
+    noremap = true,
+    silent = true,
+})
