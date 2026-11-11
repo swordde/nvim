@@ -10,13 +10,64 @@ require("swordemon.set")
 
 -- Colorscheme
 vim.cmd.colorscheme("quiet")
+-- Softer colors for eye comfort
+-- Softer code colors for eye comfort
+local groups = {
+    "Normal",
+    "NormalNC",
+    "Identifier",
+    "Statement",
+    "Function",
+    "Keyword",
+    "Type",
+    "Constant",
+    "Operator",
+    "@variable",
+    "@function",
+    "@keyword",
+}
+
+for _, group in ipairs(groups) do
+    vim.api.nvim_set_hl(0, group, {
+        fg = "#A0A0A0",
+    })
+end
+vim.api.nvim_set_hl(0, "Normal", {
+    fg = "#FFB3B3",
+    bg = "#080808",
+})
+
+vim.api.nvim_set_hl(0, "NormalNC", {
+    fg = "#FFB3B3",
+    bg = "#080808",
+})
+
+-- Comments: dim grey
+vim.api.nvim_set_hl(0, "Comment", {
+    fg = "#666666",
+})
+
+-- Strings: muted warm grey
+vim.api.nvim_set_hl(0, "String", {
+    fg = "#B0A090",
+})
 
 -- Red cursor
 vim.api.nvim_set_hl(0, "Cursor", {
     fg = "#000000",
-    bg = "#ff0000",
+    bg = "#808080",
 })
-
+--Stutus line
+vim.api.nvim_set_hl(0, "StatusLine", {
+    fg = "#808080",
+    bg = "#111111",
+})
+-- Error message colors
+vim.api.nvim_set_hl(0, "ErrorMsg", {
+    fg = "#FFB3B3",
+    bg = "#808080",
+    bold = true,
+})
 vim.opt.guicursor = {
     "n-v-c:block-Cursor",
     "i-ci:ver25-Cursor",
@@ -68,8 +119,9 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.keymap.set("n", "<space>st", function()
     vim.cmd("vnew")
     vim.cmd("term")
-    vim.cmd("wincmd J")
-    vim.api.nvim_win_set_height(0, 5)
+    vim.cmd("wincmd L")
+    vim.api.nvim_win_set_height(0, 30)
+    vim.api.nvim_win_set_width(0, 49)
 end, {
     desc = "Open terminal at bottom",
 })

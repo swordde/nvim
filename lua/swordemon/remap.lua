@@ -2,9 +2,9 @@
 vim.g.mapleader = " "
 
 -- File explorer
-vim.keymap.set("n", "<leader>]", vim.cmd.Ex)
 
 -- Move visual selection
+vim.keymap.set("n", "<leader>]", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -23,18 +23,18 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 
 -- Vim-with-me
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
+-- vim.keymap.set("n", "<leader>vwm", function()
+--     require("vim-with-me").StartVimWithMe()
+-- end)
+-- vim.keymap.set("n", "<leader>svwm", function()
+--     require("vim-with-me").StopVimWithMe()
+-- end)
+--
 -- Run Plenary tests
-vim.keymap.set("n", "<leader>lt", function()
-    vim.cmd([[PlenaryBustedFile %]])
-end)
-
+-- vim.keymap.set("n", "<leader>lt", function()
+--     vim.cmd([[PlenaryBustedFile %]])
+-- end)
+--
 -- Paste without overwriting register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -56,11 +56,12 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<M-h>", "<cmd>silent !tmux-sessionizer -s 0 --vsplit<CR>")
 vim.keymap.set("n", "<M-H>", "<cmd>silent !tmux neww tmux-sessionizer -s 0<CR>")
 
--- 🔥 Quickfix navigation (FIXED: no conflict)
+--  Quickfix navigation (FIXED: no conflict)
 vim.keymap.set("n", "<leader>k", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>cprev<CR>zz")
 
--- 🔥 Location list navigation
+--  Location list navigation
+
 vim.keymap.set("n", "<leader>K", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>J", "<cmd>lprev<CR>zz")
 
